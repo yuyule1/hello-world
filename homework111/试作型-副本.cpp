@@ -1,6 +1,6 @@
 //1.三位数求和
 
-//测试修改
+
 /*#include <iostream>
 using namespace std;
 class geweihe{
