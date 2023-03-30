@@ -1,6 +1,6 @@
-//1.ÈıÎ»ÊıÇóºÍ
+//1.ä¸‰ä½æ•°æ±‚å’Œ
 
-
+//æµ‹è¯•ä¿®æ”¹
 /*#include <iostream>
 using namespace std;
 class geweihe{
@@ -8,16 +8,16 @@ public:
       geweihe(){}
 	  int geweihe1(int num){
 	  int sum=0;
-	  int remainder=0;	    // ¼ÆËã¸÷Î»Êı×ÖÖ®ºÍ
-    remainder = num % 10; // »ñÈ¡¸öÎ»Êı
+	  int remainder=0;	    // è®¡ç®—å„ä½æ•°å­—ä¹‹å’Œ
+    remainder = num % 10; // è·å–ä¸ªä½æ•°
     sum += remainder;
     num /= 10;
 
-    remainder = num % 10; // »ñÈ¡Ê®Î»Êı
+    remainder = num % 10; // è·å–åä½æ•°
     sum += remainder;
     num /= 10;
 
-    remainder = num % 10; // »ñÈ¡°ÙÎ»Êı
+    remainder = num % 10; // è·å–ç™¾ä½æ•°
     sum += remainder;
 
 	 return sum; }	
@@ -25,12 +25,12 @@ public:
 int main() {
     int num;
     
-    cout << "ÇëÊäÈëÒ»¸ö3Î»Ê®½øÖÆÕûÊı£º";
+    cout << "è¯·è¾“å…¥ä¸€ä¸ª3ä½åè¿›åˆ¶æ•´æ•°ï¼š";
     cin >> num;
     geweihe xx;
     xx.geweihe1(num);
 
-    cout << "¸÷Î»Êı×ÖÖ®ºÍÎª£º" << xx.geweihe1(num) << endl;
+    cout << "å„ä½æ•°å­—ä¹‹å’Œä¸ºï¼š" << xx.geweihe1(num) << endl;
 
     return 0;
 }
@@ -43,30 +43,30 @@ using namespace std;
 int main() {
     int num, sum = 0, remainder;
 
-    cout << "ÇëÊäÈëÒ»¸ö3Î»Ê®½øÖÆÕûÊı£º";
+    cout << "è¯·è¾“å…¥ä¸€ä¸ª3ä½åè¿›åˆ¶æ•´æ•°ï¼š";
     cin >> num;
 
-    // ¼ÆËã¸÷Î»Êı×ÖÖ®ºÍ
-    remainder = num % 10; // »ñÈ¡¸öÎ»Êı
+    // è®¡ç®—å„ä½æ•°å­—ä¹‹å’Œ
+    remainder = num % 10; // è·å–ä¸ªä½æ•°
     sum += remainder;
     num /= 10;
 
-    remainder = num % 10; // »ñÈ¡Ê®Î»Êı
+    remainder = num % 10; // è·å–åä½æ•°
     sum += remainder;
     num /= 10;
 
-    remainder = num % 10; // »ñÈ¡°ÙÎ»Êı
+    remainder = num % 10; // è·å–ç™¾ä½æ•°
     sum += remainder;
 
-    cout << "¸÷Î»Êı×ÖÖ®ºÍÎª£º" << sum << endl;
+    cout << "å„ä½æ•°å­—ä¹‹å’Œä¸ºï¼š" << sum << endl;
 
     return 0;
 }*/
 
 
-//2.ÕÒ³öÖ»³öÏÖÁ½´ÎµÄÊı×Ö
+//2.æ‰¾å‡ºåªå‡ºç°ä¸¤æ¬¡çš„æ•°å­—
 
-//cÓïÑÔ°æ
+//cè¯­è¨€ç‰ˆ
  
 /*#include <stdio.h>
 
@@ -76,28 +76,28 @@ int main() {
     int arr[MAX_SIZE];
     int n, i, j;
     int flag, count;
-    int result[MAX_SIZE]; // ´æ´¢Ö»³öÏÖÁ½´ÎµÄÊı
-    int rsize = 0; // result Êı×éµÄ´óĞ¡
+    int result[MAX_SIZE]; // å­˜å‚¨åªå‡ºç°ä¸¤æ¬¡çš„æ•°
+    int rsize = 0; // result æ•°ç»„çš„å¤§å°
 
-    printf("ÇëÊäÈëÕûÊıµÄ¸öÊı£º");
+    printf("è¯·è¾“å…¥æ•´æ•°çš„ä¸ªæ•°ï¼š");
     scanf("%d", &n);
 
-    printf("ÇëÊäÈëÕûÊı£º");
+    printf("è¯·è¾“å…¥æ•´æ•°ï¼š");
     for(i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    // ÕÒ³öÖ»³öÏÖÁ½´ÎµÄÊı
+    // æ‰¾å‡ºåªå‡ºç°ä¸¤æ¬¡çš„æ•°
     for(i = 0; i < n; i++) {
         count = 0;
-        for(j = i + 1; j < n; j++) { // ´Ó i+1 ¿ªÊ¼±éÀú£¬±ÜÃâÖØ¸´¼ÆËã
+        for(j = i + 1; j < n; j++) { // ä» i+1 å¼€å§‹éå†ï¼Œé¿å…é‡å¤è®¡ç®—
             if(arr[i] == arr[j]) {
                 count++;
-                //arr[j] = -1; // ±ê¼ÇÒÑ¾­³öÏÖÁ½´ÎµÄÊı
+                //arr[j] = -1; // æ ‡è®°å·²ç»å‡ºç°ä¸¤æ¬¡çš„æ•°
             }
         }
         if(count >= 1) {
-            result[rsize] = arr[i]; // ´æ´¢Ö»³öÏÖÁ½´ÎµÄÊı
+            result[rsize] = arr[i]; // å­˜å‚¨åªå‡ºç°ä¸¤æ¬¡çš„æ•°
             rsize++;
         }
     }
@@ -125,7 +125,7 @@ int main() {
 }*/
 
 
-//c++°æ
+//c++ç‰ˆ
 
 
 /*#include <iostream>
@@ -140,27 +140,27 @@ public:
 	int arr[MAX_SIZE];
     int n, i, j;
     int flag, count;
-    int result[MAX_SIZE]; // ´æ´¢Ö»³öÏÖÁ½´ÎµÄÊı
-    int rsize = 0; // result Êı×éµÄ´óĞ¡
-	cout << "ÇëÊäÈëÕûÊıµÄ¸öÊı£º";
+    int result[MAX_SIZE]; // å­˜å‚¨åªå‡ºç°ä¸¤æ¬¡çš„æ•°
+    int rsize = 0; // result æ•°ç»„çš„å¤§å°
+	cout << "è¯·è¾“å…¥æ•´æ•°çš„ä¸ªæ•°ï¼š";
     cin >> n;
 
-    cout << "ÇëÊäÈëÕûÊı£º";
+    cout << "è¯·è¾“å…¥æ•´æ•°ï¼š";
     for(i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    // ÕÒ³öÖ»³öÏÖÁ½´ÎµÄÊı
+    // æ‰¾å‡ºåªå‡ºç°ä¸¤æ¬¡çš„æ•°
     for(i = 0; i < n; i++) {
         count = 0;
-        for(j = i + 1; j < n; j++) { // ´Ó i+1 ¿ªÊ¼±éÀú£¬±ÜÃâÖØ¸´¼ÆËã
+        for(j = i + 1; j < n; j++) { // ä» i+1 å¼€å§‹éå†ï¼Œé¿å…é‡å¤è®¡ç®—
             if(arr[i] == arr[j]) {
                 count++;
-                //arr[j] = -1; // ±ê¼ÇÒÑ¾­³öÏÖÁ½´ÎµÄÊı
+                //arr[j] = -1; // æ ‡è®°å·²ç»å‡ºç°ä¸¤æ¬¡çš„æ•°
             }
         }
         if(count >= 1) {
-            result[rsize] = arr[i]; // ´æ´¢Ö»³öÏÖÁ½´ÎµÄÊı
+            result[rsize] = arr[i]; // å­˜å‚¨åªå‡ºç°ä¸¤æ¬¡çš„æ•°
             rsize++;
         }
     }
@@ -194,10 +194,10 @@ int main() {
     return 0;
 }*/ 
 
-//3.µç×ÓÓÊ¼şµØÖ·ÅĞ¶Ï
+//3.ç”µå­é‚®ä»¶åœ°å€åˆ¤æ–­
  
  
-//cÓïÑÔ°æ 
+//cè¯­è¨€ç‰ˆ 
 /*#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -206,40 +206,40 @@ int isValidEmail(char email[]) {
     int len = strlen(email);
     int atPos = -1, dotPos = -1;
 
-    // É¨Ãè×Ö·û´®£¬ÅĞ¶Ï@ºÍ.µÄÎ»ÖÃ
+    // æ‰«æå­—ç¬¦ä¸²ï¼Œåˆ¤æ–­@å’Œ.çš„ä½ç½®
     for (int i = 0; i < len; i++) {
         char c = email[i];
         if (c == '@') {
             if (atPos != -1) {
-                return 0; // ¶à¸ö@£¬·Ç·¨
+                return 0; // å¤šä¸ª@ï¼Œéæ³•
             }
             atPos = i;
         } else if (c == '.') {
             if (dotPos != -1) {
-                return 0; // ¶à¸ö.£¬·Ç·¨
+                return 0; // å¤šä¸ª.ï¼Œéæ³•
             }
             if (i == atPos + 1 || i == len - 1) {
-                return 0; // .½ô°¤@ºó£¬»òÔÚ×îÄ©Î»£¬·Ç·¨
+                return 0; // .ç´§æŒ¨@åï¼Œæˆ–åœ¨æœ€æœ«ä½ï¼Œéæ³•
             }
             dotPos = i;
         } else if (!isalnum(c) && c != '_' && c != '-') {
-            return 0; // ·Ç·¨×Ö·û£¬·Ç·¨
+            return 0; // éæ³•å­—ç¬¦ï¼Œéæ³•
         }
     }
 
-    // ¼ì²é@ºÍ.µÄÎ»ÖÃ
+    // æ£€æŸ¥@å’Œ.çš„ä½ç½®
     if (atPos == -1 || dotPos == -1 || atPos > dotPos) {
-        return 0; // È±ÉÙ@»ò.£¬»òËüÃÇµÄÎ»ÖÃ²»¶Ô£¬·Ç·¨
+        return 0; // ç¼ºå°‘@æˆ–.ï¼Œæˆ–å®ƒä»¬çš„ä½ç½®ä¸å¯¹ï¼Œéæ³•
     }
 
-    return 1; // ºÏ·¨
+    return 1; // åˆæ³•
 }
 
 int main() {
     char input[100];
-    printf("ÇëÊäÈëµç×ÓÓÊ¼şµØÖ·£º");
+    printf("è¯·è¾“å…¥ç”µå­é‚®ä»¶åœ°å€ï¼š");
     fgets(input, 100, stdin);
-    // È¥µô×Ö·û´®ÖĞµÄ»»ĞĞ·û
+    // å»æ‰å­—ç¬¦ä¸²ä¸­çš„æ¢è¡Œç¬¦
     input[strcspn(input, "\n")] = 0;
 
     if (isValidEmail(input)) {
@@ -252,7 +252,7 @@ int main() {
 }*/
 
 
-//c++°æ
+//c++ç‰ˆ
  
 /*#include <iostream>
 #include <string>
@@ -268,33 +268,33 @@ public:
         int len = email.length();
         int atPos = -1, dotPos = -1;
 
-        // É¨Ãè×Ö·û´®£¬ÅĞ¶Ï@ºÍ.µÄÎ»ÖÃ
+        // æ‰«æå­—ç¬¦ä¸²ï¼Œåˆ¤æ–­@å’Œ.çš„ä½ç½®
         for (int i = 0; i < len; i++) {
             char c = email[i];
             if (c == '@') {
                 if (atPos != -1) {
-                    return false; // ¶à¸ö@£¬·Ç·¨
+                    return false; // å¤šä¸ª@ï¼Œéæ³•
                 }
                 atPos = i;
             } else if (c == '.') {
                 if (dotPos != -1) {
-                    return false; // ¶à¸ö.£¬·Ç·¨
+                    return false; // å¤šä¸ª.ï¼Œéæ³•
                 }
                 if (i == atPos + 1 || i == len - 1) {
-                    return false; // .½ô°¤@ºó£¬»òÔÚ×îÄ©Î»£¬·Ç·¨
+                    return false; // .ç´§æŒ¨@åï¼Œæˆ–åœ¨æœ€æœ«ä½ï¼Œéæ³•
                 }
                 dotPos = i;
             } else if (!isalnum(c) && c != '_' && c != '-') {
-                return false; // ·Ç·¨×Ö·û£¬·Ç·¨
+                return false; // éæ³•å­—ç¬¦ï¼Œéæ³•
             }
         }
 
-        // ¼ì²é@ºÍ.µÄÎ»ÖÃ
+        // æ£€æŸ¥@å’Œ.çš„ä½ç½®
         if (atPos == -1 || dotPos == -1 || atPos > dotPos) {
-            return false; // È±ÉÙ@»ò.£¬»òËüÃÇµÄÎ»ÖÃ²»¶Ô£¬·Ç·¨
+            return false; // ç¼ºå°‘@æˆ–.ï¼Œæˆ–å®ƒä»¬çš„ä½ç½®ä¸å¯¹ï¼Œéæ³•
         }
 
-        return true; // ºÏ·¨
+        return true; // åˆæ³•
     }
 };
 
@@ -302,7 +302,7 @@ int main() {
     EmailValidator validator;
     string input;
 
-    cout << "ÇëÊäÈëµç×ÓÓÊ¼şµØÖ·£º";
+    cout << "è¯·è¾“å…¥ç”µå­é‚®ä»¶åœ°å€ï¼š";
     getline(cin, input);
 
     if (validator.isValidEmail(input)) {
@@ -315,7 +315,7 @@ int main() {
 }*/
 
 
-//4.n¸ö·ÖÊıÏà¼Ó»¯¼ò
+//4.nä¸ªåˆ†æ•°ç›¸åŠ åŒ–ç®€
 
 
 /*#include<iostream>
@@ -323,7 +323,7 @@ int main() {
 #include<algorithm>
 #include<cmath>
 using namespace std;
-int gcd(int a, int b){   // Çó×î´ó¹«Ô¼Êı
+int gcd(int a, int b){   // æ±‚æœ€å¤§å…¬çº¦æ•°
     if(b == 0) return a;
     return gcd(b, a % b);
 }
@@ -333,12 +333,12 @@ public:
 	}
 	int he(){
 		    int n;
-    cout<<"ÊäÈë·ÖÊı¸öÊı£º"; 
+    cout<<"è¾“å…¥åˆ†æ•°ä¸ªæ•°ï¼š"; 
     cin>>n;
     int fz[n], fm[n];
     for(int i=0;i<n;i++){
         scanf("%d/%d",&fz[i],&fm[i]);
-        if(fm[i] == 0){  // ÅĞ¶Ï·ÖÄ¸ÊÇ·ñÎª0
+        if(fm[i] == 0){  // åˆ¤æ–­åˆ†æ¯æ˜¯å¦ä¸º0
             cout<<"error"<<endl;
             return 0;
         }
@@ -350,16 +350,16 @@ public:
         int tmp_fz2 = (tmp_fm *sum_fz)/ sum_fm;
         sum_fz = tmp_fz1 + tmp_fz2;
         sum_fm = tmp_fm;
-        int tmp_gcd = abs(gcd(sum_fz, sum_fm));  // Çó×î´ó¹«Ô¼Êı
+        int tmp_gcd = abs(gcd(sum_fz, sum_fm));  // æ±‚æœ€å¤§å…¬çº¦æ•°
         sum_fz /= tmp_gcd;
         sum_fm /= tmp_gcd;
     }
     if(sum_fm == 1){
-        cout<<sum_fz<<endl;  // ·ÖÄ¸Îª1£¬Ö±½ÓÊä³ö·Ö×Ó
+        cout<<sum_fz<<endl;  // åˆ†æ¯ä¸º1ï¼Œç›´æ¥è¾“å‡ºåˆ†å­
     }else if(sum_fz == 0){
-        cout<<"0"<<endl;  // ·Ö×ÓÎª0£¬Êä³ö0
+        cout<<"0"<<endl;  // åˆ†å­ä¸º0ï¼Œè¾“å‡º0
     }else{
-        cout<<sum_fz<<"/"<<sum_fm<<endl;  // Êä³ö·ÖÊı
+        cout<<sum_fz<<"/"<<sum_fm<<endl;  // è¾“å‡ºåˆ†æ•°
     }
     return 0;
 	}
@@ -372,7 +372,7 @@ int main(){
 
 
 
-//5.¼ÓÈ¨ÇóºÍ
+//5.åŠ æƒæ±‚å’Œ
 
  
 /*#include <iostream>
@@ -385,14 +385,14 @@ int main() {
     string s;
     cin >> s;
 
-    int cnt[26] = {0}; // ¼ÇÂ¼Ã¿¸ö×ÖÄ¸³öÏÖµÄ´ÎÊı
+    int cnt[26] = {0}; // è®°å½•æ¯ä¸ªå­—æ¯å‡ºç°çš„æ¬¡æ•°
     int n = s.length();
 
     for (int i = 0; i < n; i++) {
         cnt[s[i] - 'a']++;
     }
 
-    sort(cnt, cnt + 26, greater<int>()); // ½«´ÎÊı´Ó´óµ½Ğ¡ÅÅĞò
+    sort(cnt, cnt + 26, greater<int>()); // å°†æ¬¡æ•°ä»å¤§åˆ°å°æ’åº
 
     int ans = 0;
     int weight = 26;
@@ -420,14 +420,14 @@ public:
 		string s;
     cin >> s;
 
-    int cnt[26] = {0}; // ¼ÇÂ¼Ã¿¸ö×ÖÄ¸³öÏÖµÄ´ÎÊı
+    int cnt[26] = {0}; // è®°å½•æ¯ä¸ªå­—æ¯å‡ºç°çš„æ¬¡æ•°
     int n = s.length();
 
     for (int i = 0; i < n; i++) {
         cnt[s[i] - 'a']++;
     }
 
-    sort(cnt, cnt + 26, greater<int>()); // ½«´ÎÊı´Ó´óµ½Ğ¡ÅÅĞò
+    sort(cnt, cnt + 26, greater<int>()); // å°†æ¬¡æ•°ä»å¤§åˆ°å°æ’åº
 
     int ans = 0;
     int weight = 26;
